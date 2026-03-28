@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIST PORTFOLIO | Freelance Comic Book Artist</title>
+    <meta name="description"
+        content="Premium portfolio of a professional freelance comic book artist specializing in sequential art, character design, and cover illustrations.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111111' rx='20'/><path d='M50 20 L30 60 L50 60 L40 85 L70 45 L50 45 L60 20 Z' fill='%23FF3D00'/></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="dark-mode">
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">INK<span>STORM</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="desktop-only" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button id="rtl-toggle" class="desktop-only" title="Toggle RTL"><i class="fas fa-language"></i></button>
+                <div class="header-ctas desktop-only">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+                <button id="menu-toggle" class="mobile-only" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+                <div class="mobile-menu-actions">
+                    <button id="theme-toggle-mob" class="btn-theme-mob"><i class="fas fa-moon"></i> Theme</button>
+                    <button id="rtl-toggle-mob" class="btn-rtl-mob"><i class="fas fa-language"></i> RTL</button>
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section (Hero) -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <h1 class="reveal">Bringing Stories to <span class="accent">Life</span> Through Art</h1>
+                <p class="reveal">Freelance Comic Artist specializing in dynamic storytelling and character design.</p>
+                <div class="hero-btns reveal">
+                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="panel-outline one"></div>
+                <div class="panel-outline two"></div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">The <span class="accent">Portfolio</span></h2>
+                    <p class="reveal">A collection of sequential art, character designs, and cover work.</p>
+                </div>
+
+                <div class="portfolio-grid grid-system">
+                    <!-- Sequential Art -->
+                    <div class="portfolio-card reveal-up" data-category="Sequential Art">
+                        <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&q=80&w=800"
+                            alt="Sequential Comic Art 1" loading="lazy">
+                        <div class="overlay">
+                            <h3>Midnight Vigilante</h3>
+                            <p>Sequential Art</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-card reveal-up" data-category="Sequential Art">
+                        <img src=" https://m.media-amazon.com/images/M/MV5BMTIxNDExNDEyOV5BMl5BanBnXkFtZTcwNDgyNTYyMQ@@._V1_.jpg"
+                            alt="Sequential Comic Art 2" loading="lazy">
+                        <div class="overlay">
+                            <h3>Neo-Tokyo Chase</h3>
+                            <p>Sequential Art</p>
+                        </div>
+                    </div>
+                    <!-- Character Design -->
+                    <div class="portfolio-card reveal-up" data-category="Character Design">
+                        <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&q=80&w=800"
+                            alt="Character Design 1" loading="lazy">
+                        <div class="overlay">
+                            <h3>The Iron Monk</h3>
+                            <p>Character Design</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-card reveal-up" data-category="Character Design">
+                        <img src="https://images.unsplash.com/photo-1620336655055-088d06e36bf0?auto=format&fit=crop&q=80&w=800"
+                            alt="Character Design 2" loading="lazy">
+                        <div class="overlay">
+                            <h3>Cyber Punk Shogun</h3>
+                            <p>Character Design</p>
+                        </div>
+                    </div>
+                    <!-- Sequential Art Continued -->
+                    <div class="portfolio-card reveal-up" data-category="Sequential Art">
+                        <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtAAJV2Y2_CojFtjqwpbE5IW2YVXm1abmVQ&s"
+                            alt="Sequential Comic Art 3" loading="lazy">
+                        <div class="overlay">
+                            <h3>Shadow District</h3>
+                            <p>Sequential Art</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-card reveal-up" data-category="Sequential Art">
+                        <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ55fyyvBV4eh3_5QQSOQmmQaSPKl6PInerdg&s"
+                            alt="Sequential Comic Art 4" loading="lazy">
+                        <div class="overlay">
+                            <h3>Titan Rise</h3>
+                            <p>Sequential Art</p>
+                        </div>
+                    </div>
+                    <!-- Cover Art Category -->
+                    <div class="portfolio-card reveal-up" data-category="Cover Art">
+                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800"
+                            alt="Cover Art 1" loading="lazy">
+                        <div class="overlay">
+                            <h3>Eternal Horizon</h3>
+                            <p>Cover Art</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-card reveal-up" data-category="Cover Art">
+                        <img src="https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?auto=format&fit=crop&q=80&w=800"
+                            alt="Cover Art 2" loading="lazy">
+                        <div class="overlay">
+                            <h3>The Void Walker</h3>
+                            <p>Cover Art</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Showcase Section -->
+        <section id="characters" class="character-showcase">
+            <div class="container">
+                <div class="section-title white-text">
+                    <h2 class="reveal">Character <span class="accent">Showcase</span></h2>
+                </div>
+                <div class="showcase-grid grid-system">
+                    <div class="char-card reveal-left">
+                        <div class="char-img-wrap">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPVgeLuu2UOgUF-rOzdbRhACg7VTLmQjlWmg&s"
+                                alt="Character 1" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Vanish</h3>
+                            <p>A rogue dimensional traveler with the ability to phasing through solid objects.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-right">
+                        <div class="char-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1560942485-b2a11cc13456?auto=format&fit=crop&q=80&w=800"
+                                alt="Character 2" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Nova Prime</h3>
+                            <p>The last surviving member of a solar-powered warrior race, searching for a new home.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-left">
+                        <div class="char-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800"
+                                alt="Character 3" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Eclipse</h3>
+                            <p>A master of lunar shadows, able to manipulate darkness to create tangible weapons.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-right">
+                        <div class="char-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&q=80&w=800"
+                                alt="Character 4" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Iron Heart</h3>
+                            <p>A brilliant engineer who built a specialized exoskeleton to protect her city.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-left">
+                        <div class="char-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&q=80&w=800"
+                                alt="Character 5" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Storm Weaver</h3>
+                            <p>Born from the eye of a hurricane, he commands the winds and lightning.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-right">
+                        <div class="char-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=800"
+                                alt="Character 6" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Glitch</h3>
+                            <p>A digital entity that manifests in the physical world through electric currents.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-left">
+                        <div class="char-img-wrap">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShuYqgXL_hWsWYA1QazhdBPGIyTZ-LREHZuQ&s"
+                                alt="Character 7" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>The Warden</h3>
+                            <p>A timeless guardian of the ancient forest, more wood and stone than man.</p>
+                        </div>
+                    </div>
+                    <div class="char-card reveal-right">
+                        <div class="char-img-wrap">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5u9lksgiMEWJ6_tqLr-Mhvjyv5ZAUgdIj7A&s"
+                                alt="Character 8" loading="lazy">
+                        </div>
+                        <div class="char-info">
+                            <h3>Solaris</h3>
+                            <p>Infused with the core of a dying star, she radiates pure thermal energy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover Art Section -->
+        <section id="covers" class="covers">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">Legendary <span class="accent">Covers</span></h2>
+                </div>
+            </div>
+            <div class="covers-scroll-container">
+                <div class="cover-card">
+                    <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&q=80&w=1000"
+                        alt="Cover Art 1" loading="lazy">
+                </div>
+                <div class="cover-card">
+                    <img src="https://images.unsplash.com/photo-1588497859490-85d1c17db96d?auto=format&fit=crop&q=80&w=1000"
+                        alt="Cover Art 2" loading="lazy">
+                </div>
+                <div class="cover-card">
+                    <img src="https://images.unsplash.com/photo-1571757767119-68b8dbed8c97?auto=format&fit=crop&q=80&w=1000"
+                        alt="Cover Art 3" loading="lazy">
+                </div>
+                <div class="cover-card">
+                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=1000"
+                        alt="Cover Art 4" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container about-grid">
+                <div class="about-image reveal-left">
+                    <div class="sketch-lines-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&q=80&w=1200"
+                        alt="Artist at work - Sketching at drawing board">
+                    <div class="panel-accent-tag">EST. 2014</div>
+                </div>
+                <div class="about-text reveal-right">
+                    <h2 class="section-title-alt">The <span class="accent">Artist</span> Behind the Ink</h2>
+                    <p>With over 10 years of experience in the comic book industry, I specialize in creating visceral,
+                        story-driven artwork that leaps off the page. My style is a blend of classic comic ink-work and
+                        modern cinematic composition.</p>
+                    <div class="stats-comic-grid">
+                        <div class="stat-panel reveal-up">
+                            <i data-lucide="layers" class="stat-icon"></i>
+                            <div class="stat-content">
+                                <span class="stat-num">50+</span>
+                                <span class="stat-label">Published Covers</span>
+                            </div>
+                        </div>
+                        <div class="stat-panel reveal-up">
+                            <i data-lucide="book-open" class="stat-icon"></i>
+                            <div class="stat-content">
+                                <span class="stat-num">12</span>
+                                <span class="stat-label">Graphic Novels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">What I <span class="accent">Deliver</span></h2>
+                    <p class="reveal">Production-ready art for indie, studio, and personal commissions.</p>
+                </div>
+
+                <div class="services-grid grid-system">
+                    <article class="service-card reveal-up">
+                        <div class="service-media">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFGU29A18eCFbpiIdFGYm3JIPCD7AmHaKdYQ&s"
+                                alt="Sequential comic page work" loading="lazy">
+                        </div>
+                        <h3>Sequential Pages</h3>
+                        <p>Pencils, inks, and full storytelling beats with cinematic panel flow.</p>
+                    </article>
+
+                    <article class="service-card reveal-up">
+                        <div class="service-media">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwURLNdU3siMjlu_3Z4hp857tt3Ac_Yzmu_g&s"
+                                alt="Character design turnaround sheets" loading="lazy">
+                        </div>
+                        <h3>Character Design</h3>
+                        <p>Turnarounds, expressions, silhouettes, and costume exploration.</p>
+                    </article>
+
+                    <article class="service-card reveal-up">
+                        <div class="service-media">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=1200"
+                                alt="Cover illustration concept" loading="lazy">
+                        </div>
+                        <h3>Cover Art</h3>
+                        <p>High-impact compositions engineered for thumbnails and shelves.</p>
+                    </article>
+
+                    <article class="service-card reveal-up">
+                        <div class="service-media">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200"
+                                alt="Storyboarding art" loading="lazy">
+                        </div>
+                        <h3>Storyboarding</h3>
+                        <p>Visualizing scripts for film, animation, and advertising with clarity.</p>
+                    </article>
+
+                    <article class="service-card reveal-up">
+                        <div class="service-media">
+                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200"
+                                alt="Promotional art" loading="lazy">
+                        </div>
+                        <h3>Promotional Art</h3>
+                        <p>Stunning posters and social media assets to build hype for your launch.</p>
+                    </article>
+
+                    <article class="service-card reveal-up">
+                        <div class="service-media">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqaQzARXkGH6pZ6Ixces3VHs_AbFY7MKUjxw&s"
+                                alt="Concept art" loading="lazy">
+                        </div>
+                        <h3>Concept Design</h3>
+                        <p>World-building through environments, tech, and creature designs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="process">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">From <span class="accent">Script</span> to Print</h2>
+                    <p class="reveal">A clean workflow with clear milestones, fast feedback loops, and zero surprises.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-steps">
+                        <div class="process-step reveal-left">
+                            <span class="step-badge">01</span>
+                            <div>
+                                <h3>Brief + Reference</h3>
+                                <p>We align on tone, style targets, deadlines, and deliverables.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal-left">
+                            <span class="step-badge">02</span>
+                            <div>
+                                <h3>Thumbnails</h3>
+                                <p>Rapid layout passes to lock story clarity and panel rhythm.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal-left">
+                            <span class="step-badge">03</span>
+                            <div>
+                                <h3>Pencils &amp; Inks</h3>
+                                <p>Clean linework, confident silhouettes, and readable values.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal-left">
+                            <span class="step-badge">04</span>
+                            <div>
+                                <h3>Final Delivery</h3>
+                                <p>Print-ready files: layered PSD/TIF + flattened PNG/JPG as needed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-visual reveal-right" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200"
+                            alt="" loading="lazy">
+                        <div class="process-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">Client <span class="accent">Reviews</span></h2>
+                    <p class="reveal">What writers, editors, and creators say after we ship.</p>
+                </div>
+
+                <div class="testimonials-grid grid-system">
+                    <figure class="quote-card reveal-up">
+                        <blockquote>“Every panel landed emotionally. The page flow was razor sharp and the deadlines
+                            were solid.”</blockquote>
+                        <figcaption>
+                            <span class="quote-name">A. Rivera</span>
+                            <span class="quote-role">Indie Writer</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="quote-card reveal-up">
+                        <blockquote>“The character sheets were production-ready. Clean silhouettes and great costume
+                            iteration.”</blockquote>
+                        <figcaption>
+                            <span class="quote-name">M. Chen</span>
+                            <span class="quote-role">Art Director</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="quote-card reveal-up">
+                        <blockquote>“Cover concepts popped at thumbnail size. Strong values and readable focal points.”
+                        </blockquote>
+                        <figcaption>
+                            <span class="quote-name">K. Patel</span>
+                            <span class="quote-role">Editor</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">Simple <span class="accent">Pricing</span></h2>
+                    <p class="reveal">Flexible options for one-shots, minis, and ongoing series.</p>
+                </div>
+
+                <div class="pricing-grid grid-system">
+                    <div class="price-card reveal-left">
+                        <div class="price-header">
+                            <h3>Starter</h3>
+                            <p class="price-tag">$</p>
+                        </div>
+                        <ul class="price-list">
+                            <li>Single character concept</li>
+                            <li>1 cover sketch option</li>
+                            <li>72-hour feedback window</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Request Quote</a>
+                    </div>
+
+                    <div class="price-card featured reveal-up">
+                        <div class="price-header">
+                            <h3>Series</h3>
+                            <p class="price-tag">$$</p>
+                        </div>
+                        <ul class="price-list">
+                            <li>Sequential pages (batch rate)</li>
+                            <li>Consistent cast sheets</li>
+                            <li>Priority scheduling</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Start a Project</a>
+                    </div>
+
+                    <div class="price-card reveal-right">
+                        <div class="price-header">
+                            <h3>Premium</h3>
+                            <p class="price-tag">$$$</p>
+                        </div>
+                        <ul class="price-list">
+                            <li>High-detail painted cover</li>
+                            <li>Print + promo exports</li>
+                            <li>Art direction support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Book Premium</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="tools">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">My <span class="accent">Toolbox</span></h2>
+                    <p class="reveal">A fast pipeline built for clean inks, strong values, and quick revisions.</p>
+                </div>
+
+                <div class="tools-grid grid-system">
+                    <div class="tool-tile reveal-up">
+                        <div class="tool-icon" aria-hidden="true"><i data-lucide="pen-tool"></i></div>
+                        <h3>Inking</h3>
+                        <p>Brush sets tuned for crisp lines and expressive strokes.</p>
+                    </div>
+                    <div class="tool-tile reveal-up">
+                        <div class="tool-icon" aria-hidden="true"><i data-lucide="layers"></i></div>
+                        <h3>Layered Files</h3>
+                        <p>Organized PSDs for lettering, color, and easy handoff.</p>
+                    </div>
+                    <div class="tool-tile reveal-up">
+                        <div class="tool-icon" aria-hidden="true"><i data-lucide="zap"></i></div>
+                        <h3>Speed Pass</h3>
+                        <p>Thumbnail-to-pencils in a snap while keeping readability first.</p>
+                    </div>
+                    <div class="tool-tile reveal-up">
+                        <div class="tool-icon" aria-hidden="true"><i data-lucide="printer"></i></div>
+                        <h3>Print Specs</h3>
+                        <p>Bleeds, safe areas, and export profiles for common trims.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">Quick <span class="accent">FAQ</span></h2>
+                    <p class="reveal">The most common questions, answered upfront.</p>
+                </div>
+
+                <div class="faq-grid">
+                    <details class="faq-item reveal-left">
+                        <summary>What files do you deliver?</summary>
+                        <p>Layered working files plus flattened exports sized for print and web.</p>
+                    </details>
+                    <details class="faq-item reveal-left">
+                        <summary>Do you work from scripts or outlines?</summary>
+                        <p>Both. Full scripts are ideal, but strong outlines can work with a quick planning call.</p>
+                    </details>
+                    <details class="faq-item reveal-right">
+                        <summary>How many revision rounds are included?</summary>
+                        <p>Typically 2 rounds on thumbnails/pencils and 1 light pass on inks (project-dependent).</p>
+                    </details>
+                    <details class="faq-item reveal-right">
+                        <summary>What’s the usual turnaround time?</summary>
+                        <p>It depends on complexity and schedule, but I’ll confirm a timeline before we begin.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights" class="insights">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">Studio <span class="accent">Insights</span></h2>
+                    <p class="reveal">Mini-posts on storytelling, composition, and production tips.</p>
+                </div>
+
+                <div class="insights-grid grid-system">
+                    <article class="insight-card reveal-up">
+                        <div class="insight-media">
+                            <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&q=80&w=1200"
+                                alt="Notebook and planning for story beats" loading="lazy">
+                        </div>
+                        <h3>Clean Handoffs</h3>
+                        <p>How to pace action with quiet beats so the page breathes.</p>
+                    </article>
+                    <article class="insight-card reveal-up">
+                        <div class="insight-media">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg97g6UqIxYzXmpFftXJqCfiUVEh0zpzBmdw&s"
+                                alt="Computer and creative workflow" loading="lazy">
+                        </div>
+                        <h3>Panel Rhythm</h3>
+                        <p>Layer naming, exports, and specs that help your letterer and colorist.</p>
+                    </article>
+                    <article class="insight-card reveal-up">
+                        <div class="insight-media">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV1lRiN0S0WTOVYiHweUowI6UWImnKOxCSww&s"
+                                alt="Moodboard and references for characters" loading="lazy">
+                        </div>
+                        <h3>Reference That Works</h3>
+                        <p>Turn vague inspiration into clear direction in a single doc.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter">
+            <div class="container newsletter-grid">
+                <div class="newsletter-text reveal-left">
+                    <h2>Get new <span class="accent">art drops</span> &amp; tips</h2>
+                    <p>Monthly notes with process breakdowns, behind-the-scenes WIPs, and availability updates.</p>
+                    <div class="newsletter-highlights" aria-hidden="true">
+                        <span class="chip">WIPs</span>
+                        <span class="chip">Brush Sets</span>
+                        <span class="chip">Breakdowns</span>
+                    </div>
+                </div>
+                <div class="newsletter-card reveal-right">
+                    <form class="newsletter-form">
+                        <label class="sr-only" for="newsletter-email">Email</label>
+                        <input type="email" id="newsletter-email" name="newsletter-email" placeholder="YOUR EMAIL"
+                            required>
+                        <button type="submit" class="btn btn-primary full-width">Subscribe</button>
+                        <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+                    </form>
+                    <div class="newsletter-art" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=1200"
+                            alt="" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">Get in <span class="accent">Touch</span></h2>
+                    <p class="reveal">Ready to bring your story to life? Let's collaborate.</p>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="YOUR EMAIL" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="TELL ME ABOUT YOUR PROJECT"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Detailed Footer -->
+    <footer class="footer-detailed">
+        <div class="container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo">INK<span>STORM</span></a>
+                <p class="footer-desc">Bringing stories to life through dynamic sequential art and character design.
+                    Let's create something legendary together.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Links Column 1 -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Column 2 -->
+            <div class="footer-col">
+                <h4>Professional</h4>
+                <ul class="footer-nav">
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="login.html">Client Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> hello@inkstorm.art</p>
+                    <p><i class="fas fa-map-marker-alt"></i> New York, NY / Remote</p>
+                    <a href="#contact" class="btn btn-secondary">Start Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 INK STORM Studio. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
