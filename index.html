@@ -265,23 +265,27 @@
                     <h2 class="reveal">Legendary <span class="accent">Covers</span></h2>
                 </div>
             </div>
-            <div class="covers-scroll-container">
-                <div class="cover-card">
-                    <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&q=80&w=1000"
-                        alt="Cover Art 1" loading="lazy">
+            <div class="covers-wrapper">
+                <button class="slider-btn prev-btn" aria-label="Previous Cover"><i class="fas fa-chevron-left"></i></button>
+                <div class="covers-scroll-container">
+                    <div class="cover-card">
+                        <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&q=80&w=1000"
+                            alt="Cover Art 1" loading="lazy">
+                    </div>
+                    <div class="cover-card">
+                        <img src="https://images.unsplash.com/photo-1588497859490-85d1c17db96d?auto=format&fit=crop&q=80&w=1000"
+                            alt="Cover Art 2" loading="lazy">
+                    </div>
+                    <div class="cover-card">
+                        <img src="https://images.unsplash.com/photo-1571757767119-68b8dbed8c97?auto=format&fit=crop&q=80&w=1000"
+                            alt="Cover Art 3" loading="lazy">
+                    </div>
+                    <div class="cover-card">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=1000"
+                            alt="Cover Art 4" loading="lazy">
+                    </div>
                 </div>
-                <div class="cover-card">
-                    <img src="https://images.unsplash.com/photo-1588497859490-85d1c17db96d?auto=format&fit=crop&q=80&w=1000"
-                        alt="Cover Art 2" loading="lazy">
-                </div>
-                <div class="cover-card">
-                    <img src="https://images.unsplash.com/photo-1571757767119-68b8dbed8c97?auto=format&fit=crop&q=80&w=1000"
-                        alt="Cover Art 3" loading="lazy">
-                </div>
-                <div class="cover-card">
-                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=1000"
-                        alt="Cover Art 4" loading="lazy">
-                </div>
+                <button class="slider-btn next-btn" aria-label="Next Cover"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
@@ -486,7 +490,9 @@
                     <div class="price-card reveal-left">
                         <div class="price-header">
                             <h3>Starter</h3>
-                            <p class="price-tag">$</p>
+                            <div class="price-tag">
+                                <span class="currency">$</span><span class="amount">150</span><span class="per">+</span>
+                            </div>
                         </div>
                         <ul class="price-list">
                             <li>Single character concept</li>
@@ -499,7 +505,9 @@
                     <div class="price-card featured reveal-up">
                         <div class="price-header">
                             <h3>Series</h3>
-                            <p class="price-tag">$$</p>
+                            <div class="price-tag">
+                                <span class="currency">$</span><span class="amount">450</span><span class="per">+</span>
+                            </div>
                         </div>
                         <ul class="price-list">
                             <li>Sequential pages (batch rate)</li>
@@ -512,7 +520,9 @@
                     <div class="price-card reveal-right">
                         <div class="price-header">
                             <h3>Premium</h3>
-                            <p class="price-tag">$$$</p>
+                            <div class="price-tag">
+                                <span class="currency">$</span><span class="amount">950</span><span class="per">+</span>
+                            </div>
                         </div>
                         <ul class="price-list">
                             <li>High-detail painted cover</li>
@@ -740,6 +750,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="assets/js/script.js"></script>

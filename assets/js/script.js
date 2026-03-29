@@ -136,4 +136,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. SMOOTH INTERACTIVE HOVER ON CHARACTER CARDS (Tilt Effect)
     // Handled purely via CSS for performance as requested, but we can add subtle follow logic here if needed.
+
+    // 8. BACK TO TOP BUTTON
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // 9. SCROLL SPY (Highlight Active Nav Link)
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a, #mobile-menu a');
+
+    const scrollSpyOptions = {
+        threshold: 0.2,
+        rootMargin: "-10% 0px -70% 0px" // Trigger when section is in the top portion of viewport
+    };
+
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        // Only process if we are NOT at the very top (let the scroll listener handle the top)
+        if (window.scrollY < 100) return;
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href === `#${id}` || href === `index.html#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, scrollSpyOptions);
+
+    sections.forEach(section => scrollSpyObserver.observe(section));
+
+    // Special case: Highlight Home if we are at the very top
+    window.addEventListener('scroll', () => {
+        if (window.scrollY < 100) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === '#home' || href === 'index.html#home') {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    });
+
+    // Initial check on load
+    if (window.scrollY < 100) {
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === '#home' || link.getAttribute('href') === 'index.html#home') {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // 10. COVERS SLIDER
+    const coversScroll = document.querySelector('.covers-scroll-container');
+    const prevBtn = document.querySelector('.slider-btn.prev-btn');
+    const nextBtn = document.querySelector('.slider-btn.next-btn');
+
+    if (coversScroll && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            coversScroll.scrollBy({ left: -400, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            coversScroll.scrollBy({ left: 400, behavior: 'smooth' });
+        });
+    }
 });
