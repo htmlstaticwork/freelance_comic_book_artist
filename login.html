@@ -163,6 +163,32 @@
             right: auto;
             left: 2rem;
         }
+
+        /* Responsive Fixes for Mobile & Tablet */
+        @media (max-width: 768px) {
+            .auth-card {
+                padding: 2.5rem 2rem;
+            }
+
+            .auth-meta {
+                flex-wrap: nowrap;
+                gap: 0.5rem;
+            }
+
+            .remember-me, .forgot-password {
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-card {
+                padding: 2rem 1.25rem;
+            }
+
+            .auth-meta {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body class="dark-mode">
