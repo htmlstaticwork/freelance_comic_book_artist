@@ -1015,7 +1015,7 @@ section {
     padding: 2.5rem 2rem;
     position: relative;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
 }
 
 .quote-card::after {
@@ -1036,7 +1036,7 @@ section {
 .quote-card figcaption {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.15rem;
 }
 
@@ -1121,10 +1121,11 @@ section {
 .price-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
     opacity: 0.85;
     margin: 1rem 0;
+    text-align: left;
 }
 
 .price-list li {
@@ -1620,7 +1621,14 @@ section {
 
 .about-image {
     position: relative;
-    padding: 2rem;
+    padding: 0;
+}
+
+.about-image img {
+    width: 100%;
+    transform: scale(1.05);
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .sketch-lines-bg {
@@ -1828,10 +1836,15 @@ footer {
         gap: 0.5rem;
     }
     
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-grid { display: flex; flex-direction: column-reverse; gap: 3rem; }
     .process-grid { grid-template-columns: 1fr; }
     .newsletter-grid { grid-template-columns: 1fr; }
     .faq-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { 
+        grid-template-columns: 1fr; 
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1875,16 +1888,7 @@ footer {
 
     .section-title h2 { font-size: 2.5rem; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .testimonials-grid { 
-        grid-template-columns: repeat(2, 1fr); 
-        justify-content: center;
-    }
-    .testimonials-grid > *:last-child:nth-child(odd) {
-        grid-column: 1 / span 2;
-        justify-self: center;
-        width: 100%;
-        max-width: 450px;
-    }
+
     .pricing-grid { grid-template-columns: repeat(2, 1fr); }
     .insights-grid { grid-template-columns: repeat(2, 1fr); }
     .tools-grid { --grid-cols: 2; }
