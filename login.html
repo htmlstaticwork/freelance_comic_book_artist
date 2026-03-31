@@ -52,10 +52,15 @@
             font-size: 1.8rem;
         }
 
+        form {
+            width: 100%;
+        }
+
         .form-group {
             margin-bottom: 1.5rem;
             text-align: left;
             position: relative;
+            width: 100%;
         }
 
         .password-toggle {
@@ -79,6 +84,7 @@
             align-items: center;
             margin-bottom: 2rem;
             font-size: 0.9rem;
+            width: 100%;
         }
 
         .remember-me {
@@ -86,11 +92,27 @@
             align-items: center;
             gap: 0.5rem;
             cursor: pointer;
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        .remember-me input[type="checkbox"] {
+            flex-shrink: 0;
+            margin: 0;
         }
 
         .forgot-password {
             color: var(--secondary-color);
             font-weight: 700;
+            flex-shrink: 0;
+            white-space: nowrap;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .forgot-password:hover {
+            opacity: 0.8;
+            text-decoration: underline;
         }
 
         .social-login {
@@ -171,12 +193,7 @@
             }
 
             .auth-meta {
-                flex-wrap: nowrap;
-                gap: 0.5rem;
-            }
-
-            .remember-me, .forgot-password {
-                white-space: nowrap;
+                font-size: 0.85rem;
             }
         }
 
@@ -199,7 +216,13 @@
     </div>
 
     <div class="auth-card">
-        <a href="index.html" class="logo">INK<span>STORM</span></a>
+        <a href="index.html" class="logo">
+            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <rect width="100" height="100" fill="#111111" rx="20"/>
+                <path d="M50 20 L30 60 L50 60 L40 85 L70 45 L50 45 L60 20 Z" fill="#FF3D00"/>
+            </svg>
+            INK<span>STORM</span>
+        </a>
         <h2>WELCOME</h2>
 
         <form>
@@ -211,11 +234,12 @@
                 <i class="fas fa-eye password-toggle" id="toggle-password"></i>
             </div>
 
-            <div class="auth-meta">
-                <label class="remember-me">
-                    <input type="checkbox"> Remember Me
+            <div class="auth-meta" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 2rem;">
+                <label class="remember-me" style="display: flex; align-items: center; gap: 0.5rem; margin: 0; cursor: pointer; white-space: nowrap;">
+                    <input type="checkbox" style="width: 16px; height: 16px; margin: 0;">
+                    <span style="font-size: 0.9rem;">Remember Me</span>
                 </label>
-                <a href="#" class="forgot-password">Forgot Password?</a>
+                <a href="#" class="forgot-password" style="color: var(--secondary-color); font-weight: 700; font-size: 0.9rem; text-decoration: none;">Forgot Password?</a>
             </div>
 
             <button type="submit" class="btn btn-primary full-width">LOGIN</button>
