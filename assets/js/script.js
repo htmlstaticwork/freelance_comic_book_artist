@@ -158,57 +158,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 9. SCROLL SPY (Highlight Active Nav Link)
-    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a, #mobile-menu a');
+    const sectionsToObserve = [];
+    
+    // Only observe sections that actually have a matching nav link
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && (href.startsWith('#') || href.includes('#'))) {
+            const id = (href.startsWith('#')) ? href.slice(1) : href.split('#')[1];
+            const section = document.getElementById(id);
+            if (section && !sectionsToObserve.includes(section)) sectionsToObserve.push(section);
+        }
+    });
 
-    const scrollSpyOptions = {
-        threshold: 0.2,
-        rootMargin: "-10% 0px -70% 0px" // Trigger when section is in the top portion of viewport
-    };
+    const updateActiveLink = () => {
+        const scrollPosition = window.scrollY + 150; // Offset for header + trigger point
+        let currentSectionId = '';
 
-    const scrollSpyObserver = new IntersectionObserver((entries) => {
-        // Only process if we are NOT at the very top (let the scroll listener handle the top)
-        if (window.scrollY < 100) return;
-
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    const href = link.getAttribute('href');
-                    if (href === `#${id}` || href === `index.html#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }, scrollSpyOptions);
-
-    sections.forEach(section => scrollSpyObserver.observe(section));
-
-    // Special case: Highlight Home if we are at the very top
-    window.addEventListener('scroll', () => {
+        // If at the very top, always show Home
         if (window.scrollY < 100) {
+            currentSectionId = 'home';
+        } else {
+            sectionsToObserve.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollPosition >= sectionTop) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+        }
+
+        if (currentSectionId) {
             navLinks.forEach(link => {
                 const href = link.getAttribute('href');
-                if (href === '#home' || href === 'index.html#home') {
+                if (href === `#${currentSectionId}` || href === `index.html#${currentSectionId}`) {
                     link.classList.add('active');
                 } else {
                     link.classList.remove('active');
                 }
             });
         }
-    });
+    };
+
+    window.addEventListener('scroll', updateActiveLink);
 
     // Initial check on load
-    if (window.scrollY < 100) {
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === '#home' || link.getAttribute('href') === 'index.html#home') {
-                link.classList.add('active');
-            }
-        });
-    }
+    updateActiveLink();
 
     // 10. COVERS SLIDER
     const coversScroll = document.querySelector('.covers-scroll-container');

@@ -73,6 +73,58 @@
             color: var(--secondary-color);
         }
 
+        .auth-meta {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            flex-wrap: nowrap;
+            gap: 0;
+            width: 100%;
+            min-height: 24px;
+        }
+
+        .terms-checkbox {
+            display: flex;
+            align-items: center; /* Vertically center checkbox with text */
+            gap: 0.5rem; /* Precise small spacing */
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            line-height: normal;
+            margin: 0;
+            padding: 0;
+        }
+
+        .terms-checkbox input[type="checkbox"] {
+            flex-shrink: 0;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .terms-checkbox span {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.4;
+            white-space: normal; /* Allow wrapping on small screens */
+        }
+
+        .terms-checkbox a {
+            color: var(--secondary-color);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .terms-checkbox a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
         .social-login {
             margin-top: 2.5rem;
         }
@@ -148,11 +200,27 @@
             .auth-card {
                 padding: 2.5rem 2rem;
             }
+
+            .terms-checkbox {
+                gap: 0.3rem;
+            }
+
+            .terms-checkbox span {
+                font-size: 0.8rem;
+            }
         }
 
         @media (max-width: 480px) {
             .auth-card {
                 padding: 2rem 1.25rem;
+            }
+
+            .terms-checkbox {
+                gap: 0.25rem;
+            }
+
+            .terms-checkbox span {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -185,6 +253,17 @@
                 <input type="password" id="password" placeholder="PASSWORD" required>
                 <i class="fas fa-eye password-toggle" id="toggle-password"></i>
             </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD" required>
+                <i class="fas fa-eye password-toggle" id="toggle-confirm-password"></i>
+            </div>
+
+            <div class="auth-meta">
+                <label class="terms-checkbox">
+                    <input type="checkbox" required>
+                    <span>I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></span>
+                </label>
+            </div>
 
             <button type="submit" class="btn btn-primary full-width">REGISTER</button>
         </form>
@@ -207,11 +286,27 @@
         // Password Show/Hide Toggle
         const togglePassword = document.getElementById('toggle-password');
         const password = document.getElementById('password');
+        const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+        const confirmPassword = document.getElementById('confirm-password');
 
         togglePassword.addEventListener('click', function() {
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
             this.classList.toggle('fa-eye-slash');
+        });
+
+        toggleConfirmPassword.addEventListener('click', function() {
+            const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPassword.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            if (password.value !== confirmPassword.value) {
+                e.preventDefault();
+                alert('Passwords do not match!');
+            }
         });
     </script>
 </body>
